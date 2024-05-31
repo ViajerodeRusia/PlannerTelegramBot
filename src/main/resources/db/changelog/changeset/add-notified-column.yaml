@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Denis Siliukov
+      changes:
+        - addColumn:
+            tableName: notification_task
+            columns:
+              - column:
+                  name: notified
+                  type: boolean
+                  defaultValueBoolean: false
