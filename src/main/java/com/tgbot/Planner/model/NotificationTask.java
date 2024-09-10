@@ -31,4 +31,12 @@ public class NotificationTask {
 
     @Column(name = "notified", nullable = false) // Флаг, указывающий, было ли уведомление уже отправлено
     private Boolean notified;
+
+    // Параметризованный конструктор
+    public NotificationTask(Long chatId, String messageText, LocalDateTime notificationTime, Boolean notified) {
+        this.chatId = chatId;
+        this.messageText = messageText;
+        this.notificationTime = notificationTime;
+        this.notified = notified;
+    }
 }
